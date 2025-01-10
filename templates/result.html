@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicted Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <h1>Predicted House Price</h1>
+    <p>The estimated price of the house is:<br> <strong>${{ price }}</strong></p>
+    <div style="text-align: center; margin-top:200px;">
+    <a href="{{ url_for('form') }}" class="button" >Predict Another</a>
+        </div>
+</body>
+
+</html>

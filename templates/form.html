@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Features</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_form.css') }}">
+</head>
+
+<body>
+    <h1>Enter House Features</h1>
+    <form action="{{ url_for('form') }}" method="post">
+
+        <div>
+
+        <label for="MSZoning">General zoning</label>
+        <select name="MSZoning" id="MSZoning" required>
+            <option value="RL">Residential Low Density (RL)</option>
+            <option value="RM">Residential Medium Density (RM)</option>
+            <option value="FV">Floating Village Residential (FV)</option>
+            <option value="A">Agriculture</option>
+            <option value="C">Commercial</option>
+            <option value="I">Industrial</option>
+            <option value="RP">Residential Low Density Park (RP)</option>
+        </select>
+
+        <label for="HouseStyle">House style</label>
+        <select name="HouseStyle" id="HouseStyle" required>
+            <option value="1Story">One story</option>
+            <option value="1.5Fin">One and one-half story: 2nd level finished</option>
+            <option value="1.5Unf">One and one-half story: 2nd level unfinished</option>
+            <option value="2Story">Two story</option>
+            <option value="2.5Fin">Two and one-half story: 2nd level finished</option>
+            <option value="2.5Unf">Two and one-half story: 2nd level unfinished</option>
+            <option value="SFoyer">Split Foyer</option>
+            <option value="SLvl">Split Level</option>
+        </select>
+
+        <label for="Foundation">Type of foundation</label>
+        <select name="Foundation" id="Foundation" required>
+            <option value="PConc">Poured Concrete</option>
+            <option value="BrkTil">Brick & Tile</option>
+            <option value="CBlock">Cinder Block</option>
+            <option value="Slab">Slab</option>
+            <option value="Stone">Stone</option>
+            <option value="Wood">Wood</option>
+        </select>
+
+        <label for="YearBuilt">Year of construction</label>
+        <input type="number" name="YearBuilt" id="YearBuilt" min="1800" max="2024" value="2006" required>
+
+        <label for="OverallQual">Overall finish of the house</label>
+        <select name="OverallQual" id="OverallQual" required>
+            <option value="5">Average</option>
+            <option value="10">Very Excellent</option>
+            <option value="9">Excellent</option>
+            <option value="8">Very Good</option>
+            <option value="7">Good</option>
+            <option value="6">Above Average</option>
+            <option value="4">Below Average</option>
+            <option value="3">Fair</option>
+            <option value="2">Poor</option>
+            <option value="1">Very Poor</option>
+        </select>
+
+        <label for="OverallCond">Overall condition of the house</label>
+        <select name="OverallCond" id="OverallCond" required>
+            <option value="5">Average</option>
+            <option value="10">Very Excellent</option>
+            <option value="9">Excellent</option>
+            <option value="8">Very Good</option>
+            <option value="7">Good</option>
+            <option value="6">Above Average</option>
+            <option value="4">Below Average</option>
+            <option value="3">Fair</option>
+            <option value="2">Poor</option>
+            <option value="1">Very Poor</option>
+        </select>
+
+        <label for="LotArea">Lot size (square feet)</label>
+        <input type="number" name="LotArea" id="LotArea" step="1" min="0" value="7200" required>
+
+        <label for="GrLivArea">Living area (square ft)</label>
+        <input type="number" name="GrLivArea" id="GrLivArea" step="1" min="0" value="864" required>
+
+        <label for="Bedroom">Number of bedrooms</label>
+        <input type="number" name="Bedroom" id="Bedroom" step="1" min="0" value="3" required>
+
+        <label for="FullBath">Number of bathrooms</label>
+        <input type="number" name="FullBath" id="FullBath" step="1" min="0" value="2" required>
+
+        </div>
+
+        <div>
+
+        <label for="KitchenQual">Kitchen quality</label>
+        <select name="KitchenQual" id="KitchenQual" required>
+            <option value="TA">Typical/Average</option>
+            <option value="Ex">Excellent</option>
+            <option value="Gd">Good</option>
+            <option value="Fa">Fair</option>
+            <option value="Po">Poor</option>
+        </select>
+
+        <label for="Utilities">Utilities</label>
+        <select name="Utilities" id="Utilities" required>
+            <option value="AllPub">All public Utilities (E, G, W, & S)</option>
+            <option value="NoSewr">Electricity, Gas, and Water (Septic Tank)</option>
+            <option value="NoSeWa">Electricity and Gas Only</option>
+            <option value="ELO">Electricity only</option>
+        </select>
+
+        <label for="Heating">Heating</label>
+        <select name="Heating" id="Heating" required>
+            <option value="GasA">Gas forced warm air furnace</option>
+            <option value="Floor">Floor Furnace</option>
+            <option value="GasW">Gas hot water or steam heat</option>
+            <option value="Grav">Gravity furnace</option>
+            <option value="OthW">Hot water or steam heat other than gas</option>
+            <option value="Wall">Wall furnace</option>
+        </select>
+
+        <label for="GarageArea">Garage size (square feet)</label>
+        <input type="number" name="GarageArea" id="GarageArea" step="1" min="0" value="0" required>
+
+        <!-- GarageCars -->
+        <label for="GarageCars">Garage capacity (cars)</label>
+        <input type="number" name="GarageCars" id="GarageCars" step="1" min="0" value="2" required>
+
+        <label for="TotalBsmtSF">Total basement area (square feet)</label>
+        <input type="number" name="TotalBsmtSF" id="TotalBsmtSF" step="1" min="0" value="0" required>
+
+        <label for="MoSold">Month sold (MM)</label>
+        <input type="number" name="MoSold" id="MoSold" min="1" max="12" value="6" required>
+
+        <label for="YrSold">Year sold (YYYY)</label>
+        <input type="number" name="YrSold" id="YrSold" min="1800" max="2024" value="2009" required>
+
+        <label for="SaleType">Sale type</label>
+        <select name="SaleType" id="SaleType" required>
+            <option value="WD">Warranty Deed - Conventional</option>
+            <option value="CWD">Warranty Deed - Cash</option>
+            <option value="VWD">Warranty Deed - VA Loan</option>
+            <option value="New">Home just constructed and sold</option>
+            <option value="COD">Court Officer Deed/Estate</option>
+            <option value="Con">Contract 15% Down payment regular terms</option>
+            <option value="ConLw">Contract Low Down payment and low interest</option>
+            <option value="ConLI">Contract Low Interest</option>
+            <option value="ConLD">Contract Low Down</option>
+            <option value="Oth">Other</option>
+        </select>
+
+        <label for="SaleCondition">Sale condition</label>
+        <select name="SaleCondition" id="SaleCondition" required>
+            <option value="Normal">Normal Sale</option>
+            <option value="Abnorml">Abnormal Sale - trade, foreclosure, short sale</option>
+            <option value="AdjLand">Adjoining Land Purchase</option>
+            <option value="Alloca">Allocation - two linked properties with separate deeds, typically condo with a garage unit</option>
+            <option value="Family">Sale between family members</option>
+            <option value="Partial">Home was not completed when last assessed (associated with New Homes)</option>
+        </select>
+
+        </div>
+
+        <button type="submit" class="button">Predict Price</button>
+    </form>
+</body>
+</html>

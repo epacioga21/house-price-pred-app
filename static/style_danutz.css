@@ -1,0 +1,72 @@
+@keyframes mymove {
+  from {left: -1000px;}
+  to {left: 280px;}
+}
+
+@keyframes mymove1 {
+  from {top: -100px;}
+  to {top: 0px;}
+}
+
+body{
+    background-image: url("fundal_index.png");
+    background-position: top;
+    background-size: 1650px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+    font-size: x-large;
+}
+h1 {
+    color: white;
+    font-family: "Roboto Light", sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+div {
+    color: white;
+    font-family: "Roboto Light", sans-serif;
+    position: relative;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
+    text-align: left;
+}
+
+div1{
+    color: white;
+    font-family: "Roboto Light", sans-serif;
+    position: relative;
+    animation: mymove1 5s;
+    animation-fill-mode: forwards;
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 26px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24),0 17px 50px 0 rgba(255,255,255,0.19);
+}
+
+.image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+}
+.image-container img {
+    width: 100%;
+}
+

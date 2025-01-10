@@ -1,0 +1,48 @@
+﻿
+
+
+body {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),url(fundal.jpg);
+    background-position:center;
+    background-size:cover;
+    height: auto;
+    overflow: hidden;
+}
+h1{
+    font-size: 42px;
+    text-align: center;
+    margin-top: 100px;
+    color: #b36700;
+
+}
+p{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    margin-top:150px;
+    color: antiquewhite;
+}
+
+
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 20px;
+    color: black;
+    background-color:#b36700 ;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.button:hover {
+    background-color: blanchedalmond;
+}
+
